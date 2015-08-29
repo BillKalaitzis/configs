@@ -1,0 +1,32 @@
+own_window yes 
+#own_window_colour 000000
+#own_window_colour 171717
+own_window_colour 262729
+own_window_transparent no 
+#own_window_type panel
+own_window_type normal 
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+use_spacer right 
+use_xft yes
+xftfont silkscreen:size=6
+xftalpha 1
+text_buffer_size 2048 
+alignment top
+gap_x 5
+gap_y 788
+cpu_avg_samples 1
+update_interval 1.0
+stippled_borders 0
+minimum_size 1366 3
+maximum_width 1366 2
+border_margin 3z
+border_width 0 
+default_color 5e7175
+draw_outline no
+draw_borders no
+uppercase no
+draw_shades no 
+
+TEXT
+                                      ${color f92672}Debian Testing ${color} | ${color beed5f}Machine${color d3d3d3} $nodename | ${color fd971f}Uptime ${color d3d3d3} $uptime ${color}| ${color ff669d}Kernel${color d3d3d3} $kernel | ${color 9e6ffe}Cpu0: ${color d3d3d3} ${cpu cpu1}% - ${execi 20 sensors | awk '/Core 0/ {gsub(/\+/,"",$3); gsub(/\..+/,"",$3); print $3}'}°C | ${color 9e6ffe}Cpu1: ${color d3d3d3} ${cpu cpu2}% - ${execi 20 sensors | awk '/Core 1/ {gsub(/\+/,"",$3); gsub(/\..+/,"",$3); print $3}'}°C | ${color 00CBEE}Ram: ${color d3d3d3}${mem} | ${color}Home: ${color e0e0e0}${font}${fs_free /}|${color} Down: ${color e0e0e0} ${downspeed wlan0} Kb/s |${color D45959} Up: ${color} ${color e0e0e0} ${upspeed wlan0} Kb/s 
